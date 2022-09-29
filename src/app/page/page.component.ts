@@ -3,7 +3,7 @@ import { MockService } from '../services/apiServices';
 
 @Component({
     selector: 'app-header',
-    templateUrl: './header.component.html',
+    templateUrl: './page.component.html',
     styleUrls: ['../app.component.scss']
 })
 export class HeaderComponent implements OnInit {
@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
         this.apiServices.getAllProducts().subscribe((res)=>{
             console.log("ress", res)
             this.listData = res;
-            console.log(this.listData)
         })
     }
 
@@ -22,7 +21,6 @@ export class HeaderComponent implements OnInit {
         this.apiServices.getSearchProducts(value).subscribe((res)=>{
             console.log("ress", res)
             this.listData = res;
-            console.log(this.listData)
         })
     }
     
@@ -30,7 +28,6 @@ export class HeaderComponent implements OnInit {
         this.apiServices.getSearchProductsVintage(value).subscribe((res)=>{
             console.log("ress", res)
             this.listData = res;
-            console.log(this.listData)
         })
     }
 } 

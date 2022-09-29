@@ -368,47 +368,49 @@
           </div>
           <div class="container_products">
             <div class="product_item"  *ngFor=" let item of listData">
-              <div class="product_item-img">
-                <img [src]="item.image" alt=""/>
-              </div>
-              <h3>
-              {{item.name}}
-              </h3>
-              <h1>              {{item.price}}$
-              </h1>
-              <span>Eligible for Shipping To Mars or somewhere else</span>
-              <div class="product_item-evaluate">
-                <div class="product_item-vote">
-                  <div class="product_item-rating" *ngIf="item.rating >= 4.5">
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img
-                      class="star"
-                      src="../../assets/image/star1.svg"
-                      alt=""
-                      srcset=""
-                    />
-                  </div>
-                  <div class="product_item-rating" *ngIf="item.rating === 4">
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    <img src="../../assets/image/star.svg" alt="" srcset="" />
-                    
-                  </div>
-                  <span>              {{item.rating}}
-                  </span>
+                <a  [routerLink]="['/product-detail',item.id]">
+                <div class="product_item-img">
+                  <img [src]="item.image" alt=""/>
                 </div>
-                <div class="product_item-watch btn btn-blue">
-                  <img src="../../assets/image/heart.svg" alt="" />
-                  <span >
-                    <a  [routerLink]="['/product-detail',item.id]">Watch</a>
+                <h3>
+                {{item.name}}
+                </h3>
+                <h1>              {{item.price}}$
+                </h1>
+                <span>Eligible for Shipping To Mars or somewhere else</span>
+                <div class="product_item-evaluate">
+                  <div class="product_item-vote">
+                    <div class="product_item-rating" *ngIf="item.rating >= 4.5">
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img
+                        class="star"
+                        src="../../assets/image/star1.svg"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                    <div class="product_item-rating" *ngIf="item.rating === 4">
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      <img src="../../assets/image/star.svg" alt="" srcset="" />
+                      
+                    </div>
+                    <span>              {{item.rating}}
                     </span>
+                  </div>
+                  <div class="product_item-watch btn btn-blue">
+                    <img src="../../assets/image/heart.svg" alt="" />
+                    <span >
+                      <a >Watch</a>
+                      </span>
+                  </div>
                 </div>
+              </a>
               </div>
-            </div>
           
           </div>
         </div>
