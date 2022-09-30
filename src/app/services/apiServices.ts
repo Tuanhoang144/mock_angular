@@ -17,8 +17,8 @@ export class MockService {
     }
     getSearchProducts(value:any):Observable<any>{
         console.log(value, '..........')
-        const url =`https://utc2ranking.azurewebsites.net/api/Product/Search?keysearch=${value}`
-        return this.http.get(url, value)
+        const url =`https://utc2ranking.azurewebsites.net/api/Product/Search?keysearch=${value.search}`
+        return this.http.get(url, value.search)
     }
     getSearchProductsVintage(value:any):Observable<any>{
         console.log(value, '..........')
