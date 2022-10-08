@@ -19,11 +19,8 @@ productDetail:any
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params)=>{
       this.apiServices.getProductDetail(params.id).subscribe((res)=>{
-        console.log("ress", res)
         this.productDetail = res;
-        console.log(this.productDetail)
     })      
-      console.log(params)
     })
   }
 

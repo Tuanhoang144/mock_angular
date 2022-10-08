@@ -11,8 +11,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 @NgModule({
   declarations: [
     AppComponent,
-    // HelloComponent,
-    
     HeaderComponent,
     ProductDetailComponent
   ],
@@ -23,8 +21,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     HttpClientModule
   ],
   providers: [
-   
-    
   ],
   bootstrap: [AppComponent]
 })

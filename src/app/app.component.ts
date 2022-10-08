@@ -9,11 +9,6 @@ export class AppComponent implements OnInit {
   title = 'angular';
   
   ngOnInit(): void {
-    console.log("aaaa")
-    // this.apiServices.getAllProducts().subscribe((res)=>{
-    //     console.log("ress", res)
-
-    // })
 
 }
 }

@@ -8,25 +8,23 @@ import { MockService } from '../services/apiServices';
 })
 export class HeaderComponent implements OnInit {
     listData: any= [];
+    tabIndex: number = 0;
     constructor(private apiServices: MockService){ }
     ngOnInit(): void {
-        console.log("aaaa")
-        this.apiServices.getAllProducts().subscribe((res)=>{
-            console.log("ress", res)
+        this.apiServices.getListProduct().subscribe((res)=>{
             this.listData = res;
         })
     }
 
-    onSubmitForm(value:any){
-        this.apiServices.getSearchProducts(value).subscribe((res)=>{
-            console.log("ress", res)
+    onSearchProduct(search: any){
+        this.apiServices.getSearchListProduct(search).subscribe((res)=>{
             this.listData = res;
         })
     }
     
-    onSubmitFormVintage(value:any){
-        this.apiServices.getSearchProductsVintage(value).subscribe((res)=>{
-            console.log("ress", res)
+    onChangeTabCategory(search: any , tabIndex: number){
+        this.tabIndex = tabIndex;
+        this.apiServices.getSearchProductCategory(search).subscribe((res)=>{
             this.listData = res;
         })
     }
