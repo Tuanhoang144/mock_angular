@@ -361,7 +361,7 @@
                   "
                   (click)="onChangeTabCategory('Premium', 2)"
                 >
-                  <h3 class="links_name">Buy now</h3>
+                  <h3 class="links_name">Premium</h3>
                 </button>
               </div>
               <div class="right_top-show-item">
@@ -385,19 +385,18 @@
           </div>
         </div>
         <div class="container_products">
-          <div class="product_item" *ngFor="let item of listData">
-            <a [routerLink]="['/product-detail', item.id]">
+            <a class="product_item" *ngFor="let product_item of products" [routerLink]="['/product', product_item.id]">
               <div class="product_item-img">
-                <img [src]="item.image" alt="" />
+                <img [src]="product_item.image" alt="" />
               </div>
               <h3>
-                {{ item.name }}
+                {{ product_item.name }}
               </h3>
-              <h1>{{ item.price }}$</h1>
+              <h1>{{ product_item.price }}$</h1>
               <span>Eligible for Shipping To Mars or somewhere else</span>
               <div class="product_item-evaluate">
                 <div class="product_item-vote">
-                  <div class="product_item-rating" *ngIf="item.rating >= 4.5">
+                  <div class="product_item-rating" *ngIf="product_item.rating >= 4.5">
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
@@ -409,13 +408,13 @@
                       srcset=""
                     />
                   </div>
-                  <div class="product_item-rating" *ngIf="item.rating === 4">
+                  <div class="product_item-rating" *ngIf="product_item.rating === 4">
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
                     <img src="../../assets/image/star.svg" alt="" srcset="" />
                   </div>
-                  <span> {{ item.rating }} </span>
+                  <span> {{ product_item.rating }} </span>
                 </div>
                 <div class="product_item-watch btn btn-blue">
                   <img src="../../assets/image/heart.svg" alt="" />
@@ -425,7 +424,6 @@
                 </div>
               </div>
             </a>
-          </div>
         </div>
       </div>
       <div class="container_right-bottom">
@@ -448,7 +446,4 @@
     </div>
   </div>
 </div>
-<!-- <div *ngFor=" let item of listData">
-    <p>ten: {{item.detail}}</p>
-    <img [src]="item.img" alt="">
-  </div> -->
+

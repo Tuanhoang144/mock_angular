@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { MockService } from '../services/apiServices';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.scss']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['../app.component.scss']
 })
-export class ProductDetailComponent implements OnInit {
+export class ProductItemComponent implements OnInit {
 
   constructor(
     private activatedRoute:ActivatedRoute,
@@ -15,11 +15,11 @@ export class ProductDetailComponent implements OnInit {
 
 
    }
-productDetail:any
+productItem:any
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params)=>{
       this.apiServices.getProductDetail(params.id).subscribe((res)=>{
-        this.productDetail = res;
+        this.productItem = res;
     })      
     })
   }
