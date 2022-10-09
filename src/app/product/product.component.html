@@ -52,36 +52,42 @@
               <span class="text_related">vintage typewriter</span>
             </div>
           </div>
-          <div class="container_products detail__container">
-            <div class="detail_item">
-              <div class="detail__main-first">
-                <div class="detail__main-img">
-                    <img [src]="productItem?.image" alt="">
-                </div>
-            </div>
-            <div class="detail__main-left">
-            <h2 class="detail__main-left-title">
-                {{productItem?.name}}
-            </h2>
-            <div class="detail__main-star">
-                <div class="detail__main-star-first">
-                </div>
-                <div class="detail__main-star-review">
-                    {{productItem?.rating}}
-                </div>
-                </div>
-                <div class="detail__main-price">
-                {{productItem?.price}} $
+          <ng-container *ngIf="productItem;else: loading">
+            <div class="container_products detail__container">
+              <div class="detail_item">
+                <div class="detail__main-first">
+                  <div class="detail__main-img">
+                      <img [src]="productItem?.image" alt="">
+                  </div>
               </div>
-              <span class="detail__main-desc">
-                {{productItem?.description}}
-              </span>
-              <div class="detail__main-category">
-                  Category: <p>{{productItem?.category}}</p>
+              <div class="detail__main-left">
+              <h2 class="detail__main-left-title">
+                  {{productItem?.name}}
+              </h2>
+              <div class="detail__main-star">
+                  <div class="detail__main-star-first">
+                  </div>
+                  <div class="detail__main-star-review">
+                      {{productItem?.rating}}
+                  </div>
+                  </div>
+                  <div class="detail__main-price">
+                  {{productItem?.price}} $
+                </div>
+                <span class="detail__main-desc">
+                  {{productItem?.description}}
+                </span>
+                <div class="detail__main-category">
+                    Category: <p>{{productItem?.category}}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+            </div>
+            
+          </ng-container>
+          <ng-template #loading>
+              ...Loading
+          </ng-template>
         <app-footer></app-footer>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { connectApi } from '../services/connectApi';
 })
 export class PageComponent implements OnInit {
     products: any= [];
-    tabIndex: number = 0;
+    tabIndex: string = '';
     constructor(private apiServices: connectApi){ }
     ngOnInit(): void {
         this.apiServices.getListProduct().subscribe((res)=>{
@@ -22,7 +22,8 @@ export class PageComponent implements OnInit {
         })
     }
     
-    onChangeTabCategory(search: any ){
+    onChangeTabCategory(search: any){
+        this.tabIndex = search;
         this.apiServices.getSearchProductCategory(search).subscribe((res)=>{
             this.products = res;
         })

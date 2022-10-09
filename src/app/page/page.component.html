@@ -222,23 +222,29 @@
             <div class="right_top-show">
               <div class="right_top-show-item">
                 <button
-                  [class.btn_grey]="true"
-                  [class.btn]="true"
-                  (click)=" onChangeTabCategory('')"
+                  (click)="onChangeTabCategory('')" 
+                  class="btn"
+                  [ngClass]="
+                    tabIndex === '' ? 'btn_default' : 'btn_grey'
+                  "
                 >
                   <h3 class="links_name">Show all</h3>
                 </button>
                 <button
-                  [class.btn_grey]="true"
-                  [class.btn]="true"
                   (click)="onChangeTabCategory('Vintage')"
+                  class="btn"
+                  [ngClass]="
+                    tabIndex === 'Vintage' ? 'btn_default' : 'btn_grey'
+                  "
                 >
-                  Vintage
+                <h3 class="links_name">Vintage</h3>
                 </button>
                 <button
-                  [class.btn_grey]="true"
-                  [class.btn]="true"
                   (click)="onChangeTabCategory('Premium')"
+                  class="btn"
+                  [ngClass]="
+                    tabIndex === 'Premium' ? 'btn_default' : 'btn_grey'
+                  "
                 >
                   <h3 class="links_name">Premium</h3>
                 </button>
