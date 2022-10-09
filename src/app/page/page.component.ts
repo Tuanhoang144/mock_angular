@@ -22,8 +22,7 @@ export class PageComponent implements OnInit {
         })
     }
     
-    onChangeTabCategory(search: any , tabIndex: number){
-        this.tabIndex = tabIndex;
+    onChangeTabCategory(search: any ){
         this.apiServices.getSearchProductCategory(search).subscribe((res)=>{
             this.products = res;
         })
