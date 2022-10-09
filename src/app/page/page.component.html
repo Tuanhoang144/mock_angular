@@ -1,3 +1,72 @@
+<header>
+  <nav id="main-nav" class="navbar">
+    <ul class="navbar_first">
+      <li>
+        <a href="index.html" class="navbar_logo">
+          <span>S</span>
+          <h2>Shopka</h2>
+        </a>
+      </li>
+      <li><a href="">Sell on Shopka</a></li>
+      <li><a href="">Register</a></li>
+    </ul>
+    <div class="navbar_between">
+      <div class="navbar_input ">
+        <img
+        class="navbar_input-search"
+        src="../../assets/image/Vector.svg"
+        alt=""
+        />
+        <input
+        #yourInput
+        type="text"
+        (keyup.enter)="onSearchProduct(yourInput.value)"
+        name="search"
+          />
+        <img src="../../assets/image/icon_close.svg" alt="" />
+      </div>
+      <div>
+        <a href="#">Consumer Electronics</a>
+      </div>
+    </div>
+    <div class="navbar_last">
+      <a href="" class="btn btn-blue"> Sign in </a>
+      <a href="" class="btn btn_shadow"> My cart </a>
+      <div>
+        <img src="../../assets/image/edward_powlowski.png" alt="" />
+      </div>
+    </div>
+    <span class="header-icon header-icon-list"
+      ><i class="fas fa-list"></i>
+    </span>
+  </nav>
+  <div class="list-map">
+    <div class="list-map-container">
+      <a class="list-map-close"><i class="far fa-window-close"></i></a>
+      <div class="navbar_between-mobile">
+        <div class="navbar_input-mobile">
+          <img
+            class="navbar_input-search"
+            src="../../assets/image/Vector.svg"
+            alt=""
+          />
+          <input type="text" />
+          <img src="../../assets/image/icon_close.svg" alt="" />
+        </div>
+        <ul class="navbar_first-mobile">
+          <li><a href="#">Consumer Electronics</a></li>
+          <li><a href="">Sell on Shopka</a></li>
+          <li><a href="">Register</a></li>
+        </ul>
+      </div>
+      <div class="navbar_last-mobile">
+        <a href="" class="btn btn-blue"> Sign in </a>
+        <a href="" class="btn btn_shadow"> My cart </a>
+      </div>
+    </div>
+  </div>
+</header>
+
 <div class="container">
   <app-category></app-category>
   <div class="container_department">
@@ -315,5 +384,4 @@
     </div>
   </div>
 </div>
-
 

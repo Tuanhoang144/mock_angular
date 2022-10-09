@@ -1,95 +1,152 @@
-
-  <div class="container">
-    <app-category></app-category>
-    <div class="container_department">
-      <div class="container_right">
-        <div class="bd_pd">
-          <div class="container_right-top">
-            <div class="display_flex-space">
-              <div class="right_top-sort">
-                <a href="#" class="icon-down btn">
-                  <h3 class="links_name">Useless first</h3>
-                  <i class="fa-solid fa-angle-down"></i>
-                </a>
-                <a href="#" class="icon-down btn">
-                  <h3 class="links_name">Condition</h3>
-                  <i class="fa-solid fa-angle-down"></i>
-                </a>
-                <a href="#" class="icon-down btn">
-                  <h3 class="links_name">Delivery options</h3>
-                  <i class="fa-solid fa-angle-down"></i>
-                </a>
-              </div>
-              <div class="right_top-show">
-                <div class="right_top-show-item">
-                  <a  href="#" class="tab btn btn_default" >
-                    <h3 class="links_name">Show all</h3>
-                  </a>
-                  <a  href="#" class=" tab btn btn_grey">
-                    <h3 class="links_name">Auction</h3>
-                  </a>
-                  <a href="#" class=" tab  btn btn_grey">
-                    <h3 class="links_name">Buy now</h3>
-                  </a>
-                </div>
-                <div class="right_top-show-item">
-                  <a href="#" class="btn btn_grey">
-                    <img src="../../assets/image/view-list.svg" alt="" />
-                  </a>
-                  <a href="#" class="btn btn_default">
-                    <img src="../../assets/image/view-grid.svg" alt="" />
-                  </a>
-                </div>
-              </div>
+<header>
+  <nav id="main-nav" class="navbar">
+    <ul class="navbar_first">
+      <li>
+        <a href="index.html" class="navbar_logo">
+          <span>S</span>
+          <h2>Shopka</h2>
+        </a>
+      </li>
+      <li><a href="">Sell on Shopka</a></li>
+      <li><a href="">Register</a></li>
+    </ul>
+    <div class="navbar_between">
+      <div class="navbar_input">
+        <img
+          class="navbar_input-search"
+          src="../../assets/image/Vector.svg"
+          alt=""
+        />
+        <input type="text" />
+        <img src="../../assets/image/icon_close.svg" alt="" />
+      </div>
+      <div>
+        <a href="#">Consumer Electronics</a>
+      </div>
+    </div>
+    <div class="navbar_last">
+      <a href="" class="btn btn-blue"> Sign in </a>
+      <a href="" class="btn btn_shadow"> My cart </a>
+      <div>
+        <img src="../../assets/image/edward_powlowski.png" alt="" />
+      </div>
+    </div>
+    <span class="header-icon header-icon-list"
+      ><i class="fas fa-list"></i>
+    </span>
+  </nav>
+  <div class="list-map">
+    <div class="list-map-container">
+      <a class="list-map-close"><i class="far fa-window-close"></i></a>
+      <div class="navbar_between-mobile">
+        <div class="navbar_input-mobile">
+          <img
+            class="navbar_input-search"
+            src="../../assets/image/Vector.svg"
+            alt=""
+          />
+          <input type="text" />
+          <img src="../../assets/image/icon_close.svg" alt="" />
+        </div>
+        <ul class="navbar_first-mobile">
+          <li><a href="#">Consumer Electronics</a></li>
+          <li><a href="">Sell on Shopka</a></li>
+          <li><a href="">Register</a></li>
+        </ul>
+      </div>
+      <div class="navbar_last-mobile">
+        <a href="" class="btn btn-blue"> Sign in </a>
+        <a href="" class="btn btn_shadow"> My cart </a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <app-category></app-category>
+  <div class="container_department">
+    <div class="container_right">
+      <div class="bd_pd">
+        <div class="container_right-top">
+          <div class="display_flex-space">
+            <div class="right_top-sort">
+              <a href="#" class="icon-down btn">
+                <h3 class="links_name">Useless first</h3>
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <a href="#" class="icon-down btn">
+                <h3 class="links_name">Condition</h3>
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <a href="#" class="icon-down btn">
+                <h3 class="links_name">Delivery options</h3>
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
             </div>
-            <div class="display-flex container_right-related">
-              <span>Related</span>
-              <span class="text_related">worldwide shipping</span>
-              <span class="text_related">under $50</span>
-              <span class="text_related">kitten</span>
-              <span class="text_related">plastic plugs</span>
-              <span class="text_related">pucker shoes</span>
-              <span class="text_related">vintage typewriter</span>
+            <div class="right_top-show">
+              <div class="right_top-show-item">
+                <a href="#" class="tab btn btn_default">
+                  <h3 class="links_name">Show all</h3>
+                </a>
+                <a href="#" class="tab btn btn_grey">
+                  <h3 class="links_name">Auction</h3>
+                </a>
+                <a href="#" class="tab btn btn_grey">
+                  <h3 class="links_name">Buy now</h3>
+                </a>
+              </div>
+              <div class="right_top-show-item">
+                <a href="#" class="btn btn_grey">
+                  <img src="../../assets/image/view-list.svg" alt="" />
+                </a>
+                <a href="#" class="btn btn_default">
+                  <img src="../../assets/image/view-grid.svg" alt="" />
+                </a>
+              </div>
             </div>
           </div>
-          <ng-container *ngIf="productItem;else: loading">
-            <div class="container_products detail__container">
-              <div class="detail_item">
-                <div class="detail__main-first">
-                  <div class="detail__main-img">
-                      <img [src]="productItem?.image" alt="">
-                  </div>
+          <div class="display-flex container_right-related">
+            <span>Related</span>
+            <span class="text_related">worldwide shipping</span>
+            <span class="text_related">under $50</span>
+            <span class="text_related">kitten</span>
+            <span class="text_related">plastic plugs</span>
+            <span class="text_related">pucker shoes</span>
+            <span class="text_related">vintage typewriter</span>
+          </div>
+        </div>
+        <ng-container *ngIf="productItem; else loading">
+          <div class="container_products detail__container">
+            <div class="detail_item">
+              <div class="detail__main-first">
+                <div class="detail__main-img">
+                  <img [src]="productItem?.image" alt="" />
+                </div>
               </div>
               <div class="detail__main-left">
-              <h2 class="detail__main-left-title">
-                  {{productItem?.name}}
-              </h2>
-              <div class="detail__main-star">
-                  <div class="detail__main-star-first">
-                  </div>
+                <h2 class="detail__main-left-title">
+                  {{ productItem?.name }}
+                </h2>
+                <div class="detail__main-star">
+                  <div class="detail__main-star-first"></div>
                   <div class="detail__main-star-review">
-                      {{productItem?.rating}}
+                    {{ productItem?.rating }}
                   </div>
-                  </div>
-                  <div class="detail__main-price">
-                  {{productItem?.price}} $
                 </div>
+                <div class="detail__main-price">{{ productItem?.price }} $</div>
                 <span class="detail__main-desc">
-                  {{productItem?.description}}
+                  {{ productItem?.description }}
                 </span>
                 <div class="detail__main-category">
-                    Category: <p>{{productItem?.category}}</p>
+                  Category:
+                  <p>{{ productItem?.category }}</p>
                 </div>
               </div>
             </div>
-            </div>
-            
-          </ng-container>
-          <ng-template #loading>
-              ...Loading
-          </ng-template>
+          </div>
+        </ng-container>
+        <ng-template #loading> ...Loading </ng-template>
         <app-footer></app-footer>
       </div>
     </div>
   </div>
-  
+</div>
