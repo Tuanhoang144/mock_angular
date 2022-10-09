@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MockService } from '../services/apiServices';
+import { connectApi } from '../services/connectApi';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +11,7 @@ export class ProductItemComponent implements OnInit {
 
   constructor(
     private activatedRoute:ActivatedRoute,
-     private apiServices:MockService) {
+     private apiServices: connectApi) {
 
 
    }

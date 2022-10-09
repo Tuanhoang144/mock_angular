@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { MockService } from '../services/apiServices';
+import { connectApi } from '../services/connectApi';
 
 @Component({
     selector: 'app-page',
@@ -9,7 +9,7 @@ import { MockService } from '../services/apiServices';
 export class PageComponent implements OnInit {
     products: any= [];
     tabIndex: number = 0;
-    constructor(private apiServices: MockService){ }
+    constructor(private apiServices: connectApi){ }
     ngOnInit(): void {
         this.apiServices.getListProduct().subscribe((res)=>{
             this.products = res;
